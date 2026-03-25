@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CpHub Premium</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #38bdf8;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      opacity: 0.7;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      border-radius: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .price-box {
+      margin-top: 20px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 1s ease;
+    }
+
+    .price-box p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .telegram {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      color: black;
+      background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #38bdf8;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.6;
+    }
+
+    /* Floating Button */
+    .floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #38bdf8;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(56,189,248,0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpeg" alt="Logo" style="height:40px; border-radius:50%; vertical-align:middle;">VVIP CpHub Premium
+  <nav>
+    <a href="#movies">Movies</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Telegram</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Stream & Download Quality Cp</h1>
+  <p>Ultra HD • Instant Access • Best Prices</p>
+</div>
+
+<div class="section" id="Preview">
+  <h2>🔥 Trending Videos</h2>
+  <div class="movies">
+    <div class="card">
+      <img src="pic1.jpeg" />
+      <h3>Video 1</h3>
+      <p>HD Quality</p>
+    </div>
+    <div class="card">
+      <img src="pic2.jpeg" />
+      <h3>Video 2</h3>
+      <p>HD Quality</p>
+    </div>
+    <div class="card">
+      <img src="pic3.jpeg" />
+      <h3>Video 3</h3>
+      <p>HD Quality</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="section" id="pricing">
+  <h2>💰 Pricing Per GB</h2>
+  <div class="price-box">
+    <p>💎 $10 → 50GB = 400 HD Videos</p>
+    <p>💎 $20 → 99GB = 1300 HD Videos</p>
+    <p>💎 $25 → 106GB = 1800 HD Videos</p>
+    <p>💎 $30 → 252GB = 2600 HD Videos</p>
+    <p>💎 $35 → 269GB = 3600 HD Videos</p>
+    <p>💎 $50 → 500GB = 5600 HD Videos</p>
+    <p>💎 $75 → 714GB = 7678 HD Videos</p>
+    <p>💎 $100 → 1.52TB = 14670 HD Videos</p>
+    <p>🔥 $200 → 5TB = 32467 HD Videos</p>
+
+    <hr style="margin:20px 0; opacity:0.2;">
+   <p>📦 All Cp Videos delivered via MEGA links</p>
+    <p>🎬 Single HD videos also available</p>
+
+    <hr style="margin:20px 0; opacity:0.2;">
+
+    <p>💳 Payment Methods:</p>
+    <p>• PayPal (Recommended)</p>
+    <p>• Bitcoin & Crypto</p>
+    <p>• Telegram Wallet</p>
+    <p>• Gift Cards (Apple, Razor, Steam)</p>
+    <p>• Cash App</p>
+    <p>• Zelle</p>
+    <p>• Apple Pay</p>
+
+    <hr style="margin:20px 0; opacity:0.2;">
+
+    <p>⚡ Best prices available. Fast delivery.</p>
+    <p>✅ Stay safe & enjoy</p>
+  </div>
+</div>
+
+<div style="text-align:center; margin-top:25px;">
+
+  <a href="http://t.me//Cpgiftbellavideoslinks?text=Hi%20I%20want%20to%20buy%20a%20movie%20package"
+     style="
+       display:inline-block;
+       padding:14px 30px;
+       font-size:18px;
+       font-weight:600;
+       color:black;
+       background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+       border-radius:30px;
+       text-decoration:none;
+       box-shadow:0 0 15px rgba(56,189,248,0.6);
+       transition:0.3s;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >
+    🚀 Buy Now via Telegram
+  </a>
+
+  <p style="margin-top:10px; font-size:14px; opacity:0.7;">
+    Click to order instantly and get your Cp Videos & Megalinks delivered fast ⚡
+    Channels only accessible after Payment. Contact admin to be added with proof of payment.
+  </p>
+
+</div>
+
+<div class="section" id="contact">
+  <h2>📲 Join Us</h2>
+  <div class="telegram">
+    <a href="https://t.me/+5YFIvo9SLbU2OGQ0" class="btn">VVIP Premium Channel</a>
+    <a href="https://t.me/bdjdnnfmfkfmfnf" class="btn">Preview Channel</a>
+    <a href="http://t.me//Cpqualitystarsessions" class="btn">Contact Admin</a>
+  </div>
+</div>
+
+<a href="http://t.me//Cpgiftbellavideoslinks" class="floating">💬</a>
+
+<footer>
+  © 2026 VVIP CpHub Premium
+</footer>
+
+</body>
+</html>
